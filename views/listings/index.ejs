@@ -1,0 +1,100 @@
+<% layout("/layout/boilerplate") %>
+<body>
+<div class="category">
+        <div id="filters">
+            <div class="filter" id="active">
+                <a href="/listings">
+                    <i class="fa-solid fa-fire"></i>
+                    <p>Trending</p>
+                </a>
+            </div>
+            <div class="filter" id="rooms">
+                <a href="/listings/rooms">
+                    <i class="fa-solid fa-bed"></i>
+                    <p>Rooms</p>
+                </a>
+            </div>
+            <div class="filter" id="cities">
+                 <a href="/listings/cities">
+                    <i class="fa-solid fa-mountain-city"></i>
+                    <p>Cities</p>
+                </a>
+            </div>
+            <div class="filter" id="mountains">
+                <a href="/listings/mountains">
+                    <i class="fa-solid fa-mountain"></i>
+                    <p>Mountains</p>
+                </a>
+            </div>
+            <div class="filter">
+                <a href="/listings/castles">
+                    <i class="fa-solid fa-chess-rook"></i>
+                    <p>Castles</p>
+                </a>
+            </div>
+            <div class="filter">
+                <a href="/listings/camping">
+                    <i class="fa-solid fa-campground"></i>
+                    <p>Camping</p>
+                </a>
+            </div>
+            <div class="filter">
+                <a href="/listings/farms">
+                    <i class="fa-solid fa-feather"></i>
+                    <p>Farms</p>
+                </a>
+            </div>
+            <div class="filter">
+                <a href="/listings/arctic">
+                    <i class="fa-solid fa-star"></i>
+                    <p>Arctic</p>
+                </a>
+            </div>
+            <div class="filter">
+                <a href="/listings/domes">
+                    <i class="fa-solid fa-igloo"></i>
+                    <p>Domes</p>
+                </a>
+            </div>
+            <div class="filter">
+                <a href="/listings/boats">
+                    <i class="fa-solid fa-ship"></i>
+                    <p>Boats</p>
+                </a>
+            </div>
+        </div>
+        <div class="toggle">
+            <div class="form-check-reverse form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="toggle">&nbsp;
+                <label class="form-check-label" for="toggle">
+                    Checked switch checkbox input</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <% for (listing of allListing) { %>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-5 d-flex justify-content-center">
+                    <div class="card listing-card">
+                        <a href="/listings/<%= listing._id %>">
+                            <img src="<%= listing.image.url %>" alt="listing-image" class="card-img-top">
+                            <div class="card-title mt-2">
+                                <div class="title">
+                                    <b>
+                                        <%= listing.title %>
+                                    </b>
+                                    <p class="text-muted">Category:&nbsp;<i>
+                                            <%= listing.category %>
+                                        </i></p>
+                                </div>
+                                &#8377;<%= listing.price.toLocaleString("CN-IN") %> /night &nbsp;&nbsp;
+                                    <i class="tax">+ 18% GST</i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+    </body>

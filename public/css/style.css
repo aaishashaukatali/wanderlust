@@ -1,0 +1,204 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 4rem;
+  background-color: #ebebeb;
+  margin-top: 1rem;
+}
+
+.f-info {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Index  Page*/
+.listing-card {
+  border: none !important;
+  width: 20rem !important;
+}
+
+.card-img-top {
+  width: 100% !important;
+  object-fit: cover !important;
+  height: 15rem !important;
+  border-radius: 0.5rem !important;
+}
+
+.listing-card a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.listing-card img:hover {
+  opacity: 0.8;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tax {
+  display: none;
+}
+
+/* Show Page */
+.show-card {
+  width: 30rem !important;
+  border: none !important;
+}
+
+.add-btn,
+.edit-btn,
+.signin,
+.login {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+.starability-result {
+  margin-left: -22px;
+  transform: scale(0.7);
+}
+
+/* Map */
+#map {
+  height: 300px;
+}
+
+/* Search */
+#search-btn {
+  background-color: #fe424d !important;
+  border-radius: 1.5rem !important;
+  padding: 0 0.7rem 0 0.7rem;
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  border-radius: 1.5rem !important;
+  width: 20rem;
+  padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+}
+
+/* Filter  */
+.category {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 1.5rem;
+}
+
+#filters {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.filter {
+  margin: 1.1rem;
+}
+
+.filter a {
+  opacity: 0.7;
+  color: black;
+}
+
+.filter a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.filter:hover p {
+  border-bottom: 1px solid black;
+}
+
+#active,
+#active a {
+  color: orange;
+  opacity: 1;
+  font-weight: 600;
+}
+
+#active p {
+  border-bottom: 1px solid orange;
+}
+
+.toggle {
+  margin: 1.2rem 2rem 0.5rem 0;
+}
+
+.form-check-reverse {
+  border: 1px solid black;
+  border-radius: 0.6rem;
+  padding: 0.4rem;
+}
+
+/* Index Page Responsive */
+
+@media (max-width: 1400px) {
+  #filters {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .toggle {
+    margin: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .filter {
+    display: none;
+  }
+  #active,
+  #rooms,
+  #cities,
+  #mountains {
+    display: inline-block;
+  }
+  .toggle {
+    display: block;
+  }
+  .category {
+    display: flex;
+  }
+}
+
+/* Show Page Responsve*/
+
+@media (max-width: 550px) {
+  .show-card {
+    width: 25rem !important;
+  }
+}
